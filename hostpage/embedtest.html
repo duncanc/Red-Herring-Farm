@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <script type='text/javascript' src='jslibs/jquery-1.4.4.min.js'></script>
+        <script type='text/javascript'>
+        
+            var detectFlash = function() {
+                // Firefox/Chrome/Opera/Safari
+                if (typeof window.navigator !== 'undefined' && typeof navigator.plugins !== 'undefined') {
+                    for (var i = 0; i < navigator.plugins.length; i++) {
+                        if (/^shockwave flash/i.test(navigator.plugins[i].name)) {
+                            return true;
+                        }
+                    }
+                }
+                // IE
+                if (typeof window.ActiveXObject !== 'undefined') {
+                    try {
+                        var _ = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+                        return true;
+                    }
+                    catch (e) {
+                        return false;
+                    }
+                }
+                // Assume not
+                return false;
+            };
+            var detectCanvas2D = function() {
+                try {
+                    var canvas = document.createElement("CANVAS");
+                    if (!canvas || typeof canvas.getContext === 'undefined') return false;
+                    var ctx = canvas.getContext('2d');
+                    if (!ctx) return false;
+                    return true;
+                }
+                catch (e) {
+                    return false;
+                }
+            };
+            var getWebGLContextName = function() {
+                try {
+                    var canvas = document.createElement("CANVAS");
+                    if (!canvas || typeof canvas.getContext === 'undefined') return false;
+                    var ctx;
+                    var contextName;
+                    try {
+                        contextName = "webgl";
+                        ctx = canvas.getContext(contextName);
+                        if (!ctx) throw ("no "+contextName+" context");
+                        return contextName;
+                    }
+                    catch (e) {
+                        try {
+                            contextName = "experimental-webgl";
+                            ctx = canvas.getContext(contextName);
+                            if (!ctx) throw ("no "+contextName+" context");
+                            return contextName;
+                        }
+                        catch (e) {
+                            return null;
+                        }
+                    }
+                }
+                catch (e) {
+                    return null;
+                }
+            };
+            var getPixellyCssRule = function() {
+                if (typeof window.navigator !== 'undefined' && typeof navigator.userAgent === 'string') {
+                    var parts = navigator.userAgent.match(/Gecko/) && navigator.userAgent.match(/rv:\s*(\d+)(\.(\d+))?(\.(\d+))?/);
+                    if (parts) {
+                        var geckoVersion = [parseInt(parts[1]), parseInt(parts[3] || '0'), parseInt(parts[5] || '0')];
+                        if (!(!geckoVersion || geckoVersion[0] < 1 || geckoVersion[1] < 9 || geckoVersion[2] < 2)) {
+                            return ["imageRendering", "MozCrispEdges"];
+                        }
+                    }
+                }
+                
+                return null;
+            };
+            
+            jQuery(function($) {
+            
+                var gotFlash = detectFlash();
+                var gotCanvas2D = detectCanvas2D();
+                var pixellyCssRule = getPixellyCssRule();
+                var webglContextName = getWebGLContextName();
+                
+                $(".agsContainer").each(function() {
+                
+                    var container = this;
+                    
+                    var width = 320;
+                    var height = 240;
+                    
+                    var rendererSelect = $("<select>");
+                    
+                    $("<option>").text("Canvas2D").val("canvas2D").attr({"disabled":!gotCanvas2D}).appendTo(rendererSelect);
+                    $("<option>").text("Flash 10").val("flash10").attr({"disabled":!gotFlash}).appendTo(rendererSelect);
+                    $("<option>").text("WebGL").val("webgl").attr({"disabled":!webglContextName}).appendTo(rendererSelect);
+                    
+                    var scaleModeSelect = $("<select>");
+                    
+                    $("<option>").text("Pixelly").val("pixelly").appendTo(scaleModeSelect);
+                    $("<option>").text("Smooth").val("smooth").appendTo(scaleModeSelect);
+                    $("<option>").text("Scale-x").val("scale-x").appendTo(scaleModeSelect);
+                    
+                    var zoomLevelSelect = $("<select>");
+                    
+                    $("<option>").text("1x").val("1x").attr({"selected":"selected"}).appendTo(zoomLevelSelect);
+                    $("<option>").text("2x").val("2x").appendTo(zoomLevelSelect);
+                    $("<option>").text("3x").val("3x").appendTo(zoomLevelSelect);
+                    $("<option>").text("4x").val("4x").appendTo(zoomLevelSelect);
+                    
+                    var sendParams;
+                    if (typeof window.postMessage === 'undefined') {
+                        sendParams = function(params) {
+                            $("iframe.gameFrame", container).each(function() {
+                                $(this).attr('src', $(this).attr('src').replace(/(#.*)?$/, '#' + $.param(params)));
+                            });
+                        };
+                    }
+                    else {
+                        sendParams = function(params) {
+                            $("iframe.gameFrame", container).each(function() {
+                                this.contentWindow.postMessage($.param(params), "*");
+                            });
+                        };
+                    }
+                    
+                    zoomLevelSelect.change(function() {
+                    
+                        var scale = $("option:selected", this).val();
+                        sendParams({"scale":scale});
+                        switch(scale) {
+                            case "1x":
+                                $(".gameFrame").css({"width":width+"px", "height":height+"px"});
+                                break;
+                            case "2x":
+                                $(".gameFrame").css({"width":(width*2)+"px", "height":(height*2)+"px"});
+                                break;
+                            case "3x":
+                                $(".gameFrame").css({"width":(width*3)+"px", "height":(height*3)+"px"});
+                                break;
+                            case "4x":
+                                $(".gameFrame").css({"width":(width*4)+"px", "height":(height*4)+"px"});
+                                break;
+                        }
+                    
+                    });
+                    
+                    if ($.browser.msie) {
+                        $("option:disabled", rendererSelect).remove();
+                        $("option:disabled", scaleModeSelect).remove();
+                        $("option:disabled", zoomLevelSelect).remove();
+                    }
+                    
+                    rendererSelect.appendTo(container);
+                    scaleModeSelect.appendTo(container);
+                    zoomLevelSelect.appendTo(container);
+                
+                });
+                
+            });
+            
+        </script>
+        <style type='text/css'>
+            div.agsContainer {
+                border: 1px solid black;
+                color: white;
+                background: black;
+                display: inline-block;
+            }
+            div.agsContainer select {
+                border: 0px;
+                margin: 0px;
+                padding: 0px;
+                display: inline;
+            }
+            div.agsContainer iframe.gameFrame {
+                border: 0px;
+                margin-bottom: 1px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="agsContainer">
+                <iframe src='embed.html#width=320&amp;height=240&amp;scale=1x' frameBorder='0' style='width:320px; height:240px;' class='gameFrame'>
+                    Sorry - this embed requires <b>iframes</b> to be supported and enabled.
+                </iframe>
+            </div>
+        </center>
+    </body>
+</html>

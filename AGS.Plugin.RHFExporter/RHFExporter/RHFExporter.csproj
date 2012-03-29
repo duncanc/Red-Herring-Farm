@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0FF4FD0-37AE-4E08-9F9F-BE4DA0C6707A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedHerringFarm</RootNamespace>
+    <AssemblyName>AGS.Plugin.RHFExporter</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AGS.Types, Version=3.2.0.99, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\SPAGS\SVN\SPAGS\bin\Release\AGS.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExporterPlugin.cs" />
+    <Compile Include="ExporterPlugin.Fonts.cs" />
+    <Compile Include="ExporterPlugin.GameDef.cs" />
+    <Compile Include="DataFormats\JsonWriter.cs" />
+    <Compile Include="ImageSheets\ArevaloRectanglePacker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExporterPlugin.Bitmaps.cs" />
+    <Compile Include="ExporterPlugin.GameScripts.cs" />
+    <Compile Include="ExporterPlugin.ImageSheets.cs" />
+    <Compile Include="ExporterPlugin.RoomBackgrounds.cs" />
+    <Compile Include="ExporterPlugin.RoomDef.cs" />
+    <Compile Include="ExporterPlugin.RoomScript.cs" />
+    <Compile Include="ExporterPlugin.Sprites.cs" />
+    <Compile Include="ExporterPlugin.Translations.cs" />
+    <Compile Include="ExporterSettings.cs" />
+    <Compile Include="ExportProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportProgress.Designer.cs">
+      <DependentUpon>ExportProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreeType\FreeTypeCharMap.cs" />
+    <Compile Include="FreeType\FreeTypeFace.cs" />
+    <Compile Include="FreeType\FreeTypeGlyph.cs" />
+    <Compile Include="FreeType\FreeTypeGlyphSlot.cs" />
+    <Compile Include="FreeType\FreeTypeLibrary.cs" />
+    <Compile Include="FreeType\FreeTypeSize.cs" />
+    <Compile Include="FreeType\FTInterface.cs" />
+    <Compile Include="ImageSheets\BitmapUtil.cs" />
+    <Compile Include="ImageSheets\HashUtil.cs" />
+    <Compile Include="ImageSheets\ImageSheet.cs" />
+    <Compile Include="ImageSheets\ImageSheetEntry.cs" />
+    <Compile Include="ImageSheets\SortUtil.cs" />
+    <Compile Include="JavaScriptGeneration\Block.cs" />
+    <Compile Include="JavaScriptGeneration\CodeFilter.cs" />
+    <Compile Include="JavaScriptGeneration\Expression.cs" />
+    <Compile Include="JavaScriptGeneration\Libraries.AGS.cs" />
+    <Compile Include="JavaScriptGeneration\Libraries.Standard.cs" />
+    <Compile Include="JavaScriptGeneration\Libraries.Util.cs" />
+    <Compile Include="JavaScriptGeneration\ScopedBlock.cs" />
+    <Compile Include="JavaScriptGeneration\Script.cs" />
+    <Compile Include="JavaScriptGeneration\SPAGSConverter.cs" />
+    <Compile Include="JavaScriptGeneration\SpecialFunctions.cs" />
+    <Compile Include="JavaScriptGeneration\Libraries.cs" />
+    <Compile Include="JavaScriptGeneration\Statement.cs" />
+    <Compile Include="JavaScriptGeneration\Util.cs" />
+    <Compile Include="JavaScriptGeneration\Variable.cs" />
+    <Compile Include="JavaScriptGeneration\Writer.cs" />
+    <Compile Include="QuadTreeIzer\QuadTreeIzer.cs" />
+    <Compile Include="DataFormats\WfnFont.cs" />
+    <Compile Include="SettingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanel.Designer.cs">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManaging\TaskManager.cs" />
+    <Compile Include="HacksAndKludges.cs" />
+    <Compile Include="DelegatedStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExportProgress.resx">
+      <DependentUpon>ExportProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanel.resx">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\SPAGS\SVN\SPAGS\SPAGS.csproj">
+      <Project>{5482E0F4-7106-458A-A1C0-2E74C704837D}</Project>
+      <Name>SPAGS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

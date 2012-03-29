@@ -1,0 +1,210 @@
+{
+    "name": "!",
+    "number": 1,
+    "stateSaving": true,
+    "bottomEdgeY": 198,
+    "leftEdgeX": 0,
+    "rightEdgeX": 317,
+    "topEdgeY": 40,
+    "backgroundAnimationDelay": 5,
+    "legacyMusicVolumeAdjustment": "normal",
+    "playerCharacterView": 0,
+    "showPlayerCharacter": true,
+    "colorDepth": 32,
+    "height": 240,
+    "width": 320,
+    "numBackgrounds": 1,
+    "objects": [
+        {
+            "scriptName": "oObject0",
+            "name": "",
+            "image": 13,
+            "useRoomAreaLighting": false,
+            "useRoomAreaScaling": false,
+            "baseline": 0,
+            "x": 124,
+            "y": 147,
+            "visible": true,
+            "clickModeHandlers": {
+            }
+        },
+        {
+            "scriptName": "oSign2",
+            "name": "",
+            "image": 86,
+            "useRoomAreaLighting": false,
+            "useRoomAreaScaling": false,
+            "baseline": 245,
+            "x": 22,
+            "y": 65,
+            "visible": false,
+            "clickModeHandlers": {
+            }
+        },
+        {
+            "scriptName": "oSave",
+            "name": "Save the Game!",
+            "image": 88,
+            "useRoomAreaLighting": false,
+            "useRoomAreaScaling": false,
+            "baseline": 250,
+            "x": 29,
+            "y": 231,
+            "visible": true,
+            "clickModeHandlers": {
+                "2": {"func": "oSave_Interact"}
+            }
+        },
+        {
+            "scriptName": "oLoad",
+            "name": "Load a Game!",
+            "image": 89,
+            "useRoomAreaLighting": false,
+            "useRoomAreaScaling": false,
+            "baseline": 250,
+            "x": 129,
+            "y": 231,
+            "visible": true,
+            "clickModeHandlers": {
+                "2": {"func": "oLoad_Interact"}
+            }
+        },
+        {
+            "scriptName": "oQuit",
+            "name": "Quit the Game!",
+            "image": 90,
+            "useRoomAreaLighting": false,
+            "useRoomAreaScaling": false,
+            "baseline": 250,
+            "x": 232,
+            "y": 234,
+            "visible": true,
+            "clickModeHandlers": {
+                "2": {"func": "oQuit_Interact"}
+            }
+        }
+    ],
+    "hotspots": [
+        {
+            "name": "No hotspot",
+            "scriptName": "hHotspot0",
+            "clickModeHandlers": {
+            }
+        },
+        {
+            "name": "City!",
+            "scriptName": "hCity",
+            "clickModeHandlers": {
+                "2": {"func":"hCity_Interact"}
+            }
+        },
+        {
+            "name": "Basket!",
+            "scriptName": "hBasket",
+            "clickModeHandlers": {
+                "2": {"func":"hBasket_Interact"}
+            }
+        },
+        {
+            "name": "Blanket!",
+            "scriptName": "hBlanket",
+            "clickModeHandlers": {
+                "2": {"func":"hBlanket_Interact"}
+            }
+        },
+        {
+            "name": "Tree!",
+            "scriptName": "hTree",
+            "clickModeHandlers": {
+                "2": {"func":"hTree_Interact"}
+            }
+        },
+        {
+            "name": "Telephone!",
+            "scriptName": "hPhone",
+            "clickModeHandlers": {
+                "2": {"func":"hPhone_Interact"}
+            }
+        },
+        {
+            "name": "Flag!",
+            "scriptName": "hFlag",
+            "clickModeHandlers": {
+                "2": {"func":"hFlag_Interact"}
+            }
+        },
+        {
+            "name": "Sand Trap!",
+            "scriptName": "hSand",
+            "clickModeHandlers": {
+                "2": {"func":"hSand_Interact"}
+            }
+        },
+        {
+            "name": "Bench!",
+            "scriptName": "hBench",
+            "clickModeHandlers": {
+                "2": {"func":"hBench_Interact"}
+            }
+        },
+        {
+            "name": "House!",
+            "scriptName": "hHouse",
+            "clickModeHandlers": {
+                "2": {"func":"hHouse_Interact"}
+            }
+        },
+        {
+            "name": "Soda Stand!",
+            "scriptName": "hSoda",
+            "clickModeHandlers": {
+                "2": {"func":"hSoda_Interact"}
+            }
+        },
+        {
+            "name": "Monument!",
+            "scriptName": "hMonument",
+            "clickModeHandlers": {
+                "2": {"func":"hMonument_Interact"}
+            }
+        },
+        {
+            "name": "Bush!",
+            "scriptName": "hBush",
+            "clickModeHandlers": {
+                "2": {"func":"hBush_Interact"}
+            }
+        },
+        {
+            "name": "TV!",
+            "scriptName": "hTV",
+            "clickModeHandlers": {
+                "2": {"func":"hTV_Interact"}
+            }
+        },
+        {
+            "name": "Tyre!",
+            "scriptName": "hTyre",
+            "clickModeHandlers": {
+                "2": {"func":"hTyre_Interact"}
+            }
+        },
+        {
+            "name": "Chair!",
+            "scriptName": "hChair",
+            "clickModeHandlers": {
+                "2": {"func":"hChair_Interact"}
+            }
+        }
+    ],
+    "walkbehinds": [
+        null,
+        {"baseline": 0},
+        {"baseline": 0},
+        {"baseline": 0},
+        {"baseline": 240},
+        {"baseline": 0},
+        {"baseline": 0},
+        {"baseline": 240}
+    ]
+}

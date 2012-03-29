@@ -1,0 +1,1586 @@
+{
+
+    "guid": "f3b6a6fcc30c4ec09285e5c42e48be15",
+    
+    "audio": {
+        "clips": [
+            {
+                "scriptName": "aMusic1",
+                "fileName": "aMusic1.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic2",
+                "fileName": "aMusic2.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic3",
+                "fileName": "aMusic3.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic4",
+                "fileName": "aMusic4.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic5",
+                "fileName": "aMusic5.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic6",
+                "fileName": "aMusic6.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic7",
+                "fileName": "aMusic7.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic8",
+                "fileName": "aMusic8.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic9",
+                "fileName": "aMusic9.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "scriptName": "aMusic10",
+                "fileName": "aMusic10.ogg",
+                "fileType": "ogg"
+            }
+        ],
+        "compat_music": [
+            null,
+            {
+                "fileName": "aMusic1.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic2.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic3.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic4.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic5.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic6.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic7.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic8.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic9.ogg",
+                "fileType": "ogg"
+            },
+            {
+                "fileName": "aMusic10.ogg",
+                "fileType": "ogg"
+            }
+        ]
+    },
+    
+    "guis": [
+        {
+            "scriptName": "gHotspots",
+            "type": "normal",
+            "backgroundColor": 0,
+            "backgroundImage": 0,
+            "borderColor": 0,
+            "clickable": false,
+            "popupYPos": 0,
+            "transparency": 0,
+            "visibility": "normalInitiallyOn",
+            "height": 60,
+            "left": 0,
+            "top": 175,
+            "width": 320,
+            "zOrder": 0,
+            "controls": [
+                {
+                    "scriptName": "Label1",
+                    "type": "label",
+                    "font": 4,
+                    "text": "@OVERHOTSPOT@",
+                    "textAlignment": "topMiddle",
+                    "textColor": 65331,
+                    "height": 55,
+                    "left": 1,
+                    "top": 1,
+                    "width": 318
+                }
+            ]
+        },
+        {
+            "scriptName": "gDialogs",
+            "type": "normal",
+            "backgroundColor": 62695,
+            "backgroundImage": 0,
+            "borderColor": 0,
+            "clickable": true,
+            "popupYPos": 0,
+            "transparency": 0,
+            "visibility": "pauseGameWhenShown",
+            "height": 150,
+            "left": 0,
+            "top": 172,
+            "width": 320,
+            "zOrder": 0,
+            "controls": []
+        }
+    ],
+    
+    "resourceLocations": {
+        "globalScripts": "globalScripts.js",
+        "numberedImage": "sprites/{{imageNumber}}.png",
+        "numberedImageSet": "sprites/spriteSet{{setNumber}}.png",
+        "roomData": "rooms/{{roomNumber}}/room.json",
+        "roomBackgroundImage": "rooms/{{roomNumber}}/background{{backgroundNumber}}.png",
+        "roomHotspotMask": "rooms/{{roomNumber}}/hotspots.png",
+        "roomWalkbehindMask": "rooms/{{roomNumber}}/walkbehind{{walkbehindNumber}}.png",
+        "roomScript": "rooms/{{roomNumber}}/roomScript.js",
+        "audioClip": "audio/{{fileName}}",
+        "font": "fonts/font{{fontNumber}}.png"
+    },
+    
+    "mouseCursors": [
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 6,
+            "hotspotY": 15,
+            "name": "Walk to",
+            "standardMode": true
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 8,
+            "hotspotY": 8,
+            "name": "Look at",
+            "standardMode": true
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 14,
+            "view": 0,
+            "hotspotX": 1,
+            "hotspotY": 1,
+            "name": "Interact",
+            "standardMode": true
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 8,
+            "hotspotY": 8,
+            "name": "Talk to",
+            "standardMode": true
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 8,
+            "hotspotY": 8,
+            "name": "Use inv",
+            "standardMode": false
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 8,
+            "hotspotY": 8,
+            "name": "Pick up",
+            "standardMode": false
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 14,
+            "view": 0,
+            "hotspotX": 1,
+            "hotspotY": 1,
+            "name": "Pointer",
+            "standardMode": false
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 8,
+            "hotspotY": 8,
+            "name": "Wait",
+            "standardMode": false
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 0,
+            "hotspotY": 0,
+            "name": "Usermode1",
+            "standardMode": false
+        },
+        {
+            "animate": false,
+            "animateOnlyOnHotspot": false,
+            "animateOnlyWhenMoving": false,
+            "image": 0,
+            "view": 0,
+            "hotspotX": 0,
+            "hotspotY": 0,
+            "name": "Usermode2",
+            "standardMode": false
+        }
+    ],
+    
+    "settings": {
+        "colorDepth": 32,
+        "name": "!",
+        "maxScore": 0,
+        "width": 320,
+        "height": 240,
+        "mouseWheelSupport": true,
+        "gameWideSpeechAnimationSpeed": false,
+        "useLowResCoordinates": false,
+        "autoMoveWalkMode": true,
+        "autoMoveLookMode": false,
+        "turnBeforeWalking": true,
+        "turnToFaceDirection": false,
+        "debug": false,
+        "skipSpeech": {"mouse":true, "keyboard":true, "timer":true},
+        "dialogBulletPointImage": 0,
+        "dialogGapPixels": 0,
+        "numberDialogOptions": false,
+        "dialogOptionsUpwards": false,
+        "animateDuringDialogOptions": false,
+        "sierraPortraitLocation": "left",
+        "speechStyle": "lucasarts",
+        "dialogOptionsGui": 1,
+        "multipleInventoryIcons": false,
+        "inventoryItemCursorHotspotMarker": null,
+        "overrideInventoryWindowClick": false,
+        "inventoryIconCursor": true,
+        "scoreSound": null,
+        "alwaysDisplaySpeech": false,
+        "antiAliasTtf": false,
+        "textWindowGui": 0,
+        "thoughtBubbleGui": 0,
+        "fonts640x480": false,
+        "gameTextRightToLeft": false,
+        "defaultTransition": "fadeOutAndIn",
+        "guiAlphaStyle": "additiveOpacity",
+        "pixelPerfectClickDetection": true,
+        "disabledInterface": "greyOut"
+    },
+    
+    "roomNumbers": [1, 2, 3],
+    
+    "views": [
+        null,
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":34, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":15, "delay":0, "flipped":false},
+                        {"image":16, "delay":0, "flipped":false},
+                        {"image":17, "delay":0, "flipped":false},
+                        {"image":18, "delay":0, "flipped":false},
+                        {"image":19, "delay":0, "flipped":false},
+                        {"image":20, "delay":0, "flipped":false},
+                        {"image":21, "delay":0, "flipped":false},
+                        {"image":22, "delay":0, "flipped":false},
+                        {"image":23, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":24, "delay":0, "flipped":false},
+                        {"image":25, "delay":0, "flipped":false},
+                        {"image":26, "delay":0, "flipped":false},
+                        {"image":27, "delay":0, "flipped":false},
+                        {"image":28, "delay":0, "flipped":false},
+                        {"image":29, "delay":0, "flipped":false},
+                        {"image":30, "delay":0, "flipped":false},
+                        {"image":31, "delay":0, "flipped":false},
+                        {"image":32, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":35, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":73, "delay":0, "flipped":false},
+                        {"image":74, "delay":0, "flipped":false},
+                        {"image":75, "delay":0, "flipped":false},
+                        {"image":76, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":77, "delay":0, "flipped":false},
+                        {"image":78, "delay":0, "flipped":false},
+                        {"image":79, "delay":0, "flipped":false},
+                        {"image":78, "delay":0, "flipped":false},
+                        {"image":77, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":77, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":1, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":72, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":84, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":2, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":2, "delay":0, "flipped":false},
+                        {"image":69, "delay":0, "flipped":false},
+                        {"image":70, "delay":0, "flipped":false},
+                        {"image":71, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":10, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":36, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":36, "delay":0, "flipped":true},
+                        {"image":37, "delay":0, "flipped":true},
+                        {"image":38, "delay":0, "flipped":true},
+                        {"image":39, "delay":0, "flipped":true},
+                        {"image":40, "delay":0, "flipped":true},
+                        {"image":41, "delay":0, "flipped":true},
+                        {"image":42, "delay":0, "flipped":true},
+                        {"image":43, "delay":0, "flipped":true},
+                        {"image":44, "delay":0, "flipped":true}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":36, "delay":0, "flipped":false},
+                        {"image":37, "delay":0, "flipped":false},
+                        {"image":38, "delay":0, "flipped":false},
+                        {"image":39, "delay":0, "flipped":false},
+                        {"image":40, "delay":0, "flipped":false},
+                        {"image":41, "delay":0, "flipped":false},
+                        {"image":42, "delay":0, "flipped":false},
+                        {"image":43, "delay":0, "flipped":false},
+                        {"image":44, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":36, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":36, "delay":0, "flipped":false},
+                        {"image":3, "delay":0, "flipped":false},
+                        {"image":36, "delay":0, "flipped":false},
+                        {"image":3, "delay":0, "flipped":false},
+                        {"image":36, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":56, "delay":0, "flipped":false},
+                        {"image":57, "delay":0, "flipped":false},
+                        {"image":58, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":80, "delay":0, "flipped":false},
+                        {"image":81, "delay":0, "flipped":false},
+                        {"image":82, "delay":0, "flipped":false},
+                        {"image":83, "delay":0, "flipped":false},
+                        {"image":85, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":4, "delay":0, "flipped":false},
+                        {"image":5, "delay":0, "flipped":false},
+                        {"image":6, "delay":0, "flipped":false},
+                        {"image":7, "delay":0, "flipped":false},
+                        {"image":8, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":12, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":9, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":45, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":55, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":59, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":60, "delay":0, "flipped":false},
+                        {"image":61, "delay":0, "flipped":false},
+                        {"image":62, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":63, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":11, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":64, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":65, "delay":0, "flipped":false},
+                        {"image":66, "delay":0, "flipped":false},
+                        {"image":67, "delay":0, "flipped":false},
+                        {"image":68, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":33, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":0, "delay":0, "flipped":false}
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "loops": [
+                {
+                    "frames": [
+                        {"image":46, "delay":0, "flipped":true},
+                        {"image":47, "delay":0, "flipped":true},
+                        {"image":48, "delay":0, "flipped":true},
+                        {"image":49, "delay":0, "flipped":true},
+                        {"image":50, "delay":0, "flipped":true},
+                        {"image":51, "delay":0, "flipped":true},
+                        {"image":52, "delay":0, "flipped":true},
+                        {"image":53, "delay":0, "flipped":true},
+                        {"image":54, "delay":0, "flipped":true}
+                    ]
+                },
+                {
+                    "frames": [
+                        {"image":46, "delay":0, "flipped":true},
+                        {"image":47, "delay":0, "flipped":true},
+                        {"image":48, "delay":0, "flipped":true},
+                        {"image":49, "delay":0, "flipped":true},
+                        {"image":50, "delay":0, "flipped":true},
+                        {"image":51, "delay":0, "flipped":true},
+                        {"image":52, "delay":0, "flipped":true},
+                        {"image":53, "delay":0, "flipped":true},
+                        {"image":54, "delay":0, "flipped":true}
+                    ]
+                }
+            ]
+        }
+    ],
+    
+    "playerCharacter": 0,
+    "characters": [
+        {
+            "adjustVolumeWithScaling": false,
+            "blinkingView": 0,
+            "animationDelay": 3,
+            "idleView": 0,
+            "normalView": 1,
+            "speechAnimationDelay": 5,
+            "speechColor": 55175,
+            "speechView": 0,
+            "thinkingView": 0,
+            "useRoomAreaLighting": true,
+            "useRoomAreaScaling": true,
+            "clickable": true,
+            "name": "!, Robot!",
+            "scriptName": "cRobot",
+            "room": 2,
+            "x": -10,
+            "y": 80,
+            "movementSpeed": 3,
+            "centreNormalView": true,
+            "centreSpeechView": true,
+            "animateNormalView": false,
+            "animateSpeechView": false,
+            "skipFrameNormalView": false,
+            "skipFrameSpeechView": false,
+            "clickModeHandlers": {
+            }
+        },
+        {
+            "adjustVolumeWithScaling": false,
+            "blinkingView": 0,
+            "idleView": 0,
+            "normalView": 2,
+            "animationDelay": 4,
+            "speechAnimationDelay": 5,
+            "speechColor": 65331,
+            "speechView": 2,
+            "thinkingView": 0,
+            "useRoomAreaLighting": true,
+            "useRoomAreaScaling": true,
+            "clickable": true,
+            "name": "MC Mista Maya!",
+            "scriptName": "cMayor",
+            "room": 1,
+            "x": 58,
+            "y": 76,
+            "centreNormalView": true,
+            "centreSpeechView": true,
+            "animateNormalView": false,
+            "animateSpeechView": false,
+            "skipFrameNormalView": false,
+            "skipFrameSpeechView": false,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cMayor_Interact"}
+            }
+        },
+        {
+            "scriptName": "cEarl",
+            "room": 1,
+            "clickable": true,
+            "x": 89,
+            "y": 63,
+            "name": "DJ The Earl!",
+            "speechColor": 62695,
+            "animationDelay": 4,
+            "normalView": 3,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cEarl_Interact"}
+            }
+        },
+        {
+            "scriptName": "cOfficer",
+            "room": 1,
+            "x": 196,
+            "y": 74,
+            "name": "Officer!",
+            "speechColor": 62695,
+            "clickable": true,
+            "animationDelay": 4,
+            "normalView": 9,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cOfficer_Interact"}
+            }
+        },
+        {
+            "scriptName": "cPicnic",
+            "room": 1,
+            "x": 250,
+            "y": 80,
+            "name": "Picnicker!",
+            "speechColor": 65331,
+            "animationDelay": 4,
+            "clickable": true,
+            "normalView": 4,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cPicnic_Interact"}
+            }
+        },
+        {
+            "scriptName": "cSoda",
+            "room": 1,
+            "animationDelay": 4,
+            "clickable": true,
+            "name": "Soda Vendor!",
+            "speechColor": 65331,
+            "x": 49,
+            "y": 147,
+            "normalView": 7,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cSoda_Interact"}
+            }
+        },
+        {
+            "scriptName": "cSign",
+            "clickable": true,
+            "room": 1,
+            "name": "Witness!",
+            "speechColor": 65331,
+            "animationDelay": 4,
+            "x": 187,
+            "y": 157,
+            "normalView": 8,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cSign_Interact"}
+            }
+        },
+        {
+            "scriptName": "cTrash",
+            "room": 1,
+            "clickable": true,
+            "animationDelay": 4,
+            "name": "Dump Dweller!",
+            "x": 267,
+            "speechColor": 62695,
+            "y": 140,
+            "normalView": 6,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cTrash_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom1",
+            "clickable": true,
+            "room": 0,
+            "x": 59,
+            "y": 87,
+            "speechColor": 12,
+            "animationDelay": 4,
+            "name": "Golf Course!",
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom1_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom2",
+            "room": 1,
+            "clickable": true,
+            "name": "Suburbs!",
+            "x": 159,
+            "y": 87,
+            "speechColor": 12,
+            "animationDelay": 4,
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom2_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom3",
+            "room": 1,
+            "x": 259,
+            "name": "Park!",
+            "animationDelay": 4,
+            "clickable": true,
+            "speechColor": 12,
+            "y": 87,
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom3_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom4",
+            "room": 1,
+            "clickable": true,
+            "x": 59,
+            "name": "Soda Stand!",
+            "animationDelay": 4,
+            "y": 171,
+            "speechColor": 12,
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom4_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom5",
+            "room": 1,
+            "x": 159,
+            "name": "Town Monument!",
+            "animationDelay": 4,
+            "y": 171,
+            "speechColor": 12,
+            "clickable": true,
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom5_Interact"}
+            }
+        },
+        {
+            "scriptName": "cRoom6",
+            "room": 1,
+            "animationDelay": 4,
+            "clickable": true,
+            "name": "Dumps!",
+            "x": 259,
+            "speechColor": 12,
+            "y": 171,
+            "normalView": 10,
+            "clickModeHandlers": {
+                "2": {"script":"GlobalScript.asc", "func":"cRoom6_Interact"}
+            }
+        },
+        {
+            "scriptName": "cCount",
+            "room": 1,
+            "animationDelay": 4,
+            "clickable": true,
+            "name": "Count Can't!",
+            "x": 100,
+            "y": 163,
+            "speechColor": 62695,
+            "normalView": 5,
+            "movementSpeed": 2,
+            "clickModeHandlers": {
+            }
+        },
+        {
+            "scriptName": "cPhone",
+            "room": 1,
+            "clickable": false,
+            "x": 78,
+            "name": "New character",
+            "speechColor": 62695,
+            "animationDelay": 4,
+            "y": 153,
+            "normalView": 1,
+            "clickModeHandlers": {
+            }
+        }
+    ],
+    
+    "initialInventoryItems": [],
+    "inventoryItems": [],
+    
+    "numberedImageSets": [
+        {"w": 431, "h": 228}
+    ],
+    
+    "numberedImages": [
+        {"w":  1, "h":  1, "x":56, "y":101, "set":0},
+        {"w": 24, "h": 40, "x":301, "y":111, "set":0},
+        {"w": 16, "h": 36, "x":393, "y":77, "set":0},
+        {"w": 21, "h": 34, "x":189, "y":102, "set":0},
+        {"w": 11, "h": 18, "x":106, "y":197, "set":0},
+        {"w": 11, "h": 18, "x":117, "y":197, "set":0},
+        {"w": 11, "h": 18, "x":128, "y":197, "set":0},
+        {"w": 11, "h": 18, "x":139, "y":197, "set":0},
+        {"w": 11, "h": 18, "x":150, "y":197, "set":0},
+        {"w": 16, "h": 33, "x":379, "y":147, "set":0},
+        {"w": 21, "h": 22, "x":69, "y":197, "set":0},
+        {"w": 14, "h": 36, "x":415, "y":107, "set":0},
+        {"w": 16, "h": 31, "x":90, "y":197, "set":0},
+        {"w": 23, "h": 35, "x":0, "y":193, "set":0},
+        {"w": 11, "h": 11, "x":106, "y":215, "set":0},
+        {"w": 25, "h": 37, "x":164, "y":102, "set":0},
+        {"w": 25, "h": 37, "x":164, "y":139, "set":0},
+        {"w": 25, "h": 37, "x":164, "y":176, "set":0},
+        {"w": 25, "h": 37, "x":189, "y":142, "set":0},
+        {"w": 25, "h": 37, "x":214, "y":142, "set":0},
+        {"w": 25, "h": 37, "x":189, "y":179, "set":0},
+        {"w": 25, "h": 37, "x":214, "y":179, "set":0},
+        {"w": 25, "h": 37, "x":252, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":277, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":252, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":302, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":277, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":251, "y":74, "set":0},
+        {"w": 25, "h": 37, "x":327, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":302, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":276, "y":74, "set":0},
+        {"w": 25, "h": 37, "x":352, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":251, "y":111, "set":0},
+        {"w": 99, "h": 83, "x":0, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":327, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":301, "y":74, "set":0},
+        {"w": 21, "h": 34, "x":351, "y":74, "set":0},
+        {"w": 21, "h": 34, "x":325, "y":111, "set":0},
+        {"w": 21, "h": 34, "x":401, "y":37, "set":0},
+        {"w": 21, "h": 34, "x":263, "y":185, "set":0},
+        {"w": 21, "h": 34, "x":289, "y":151, "set":0},
+        {"w": 21, "h": 34, "x":372, "y":77, "set":0},
+        {"w": 21, "h": 34, "x":346, "y":111, "set":0},
+        {"w": 21, "h": 34, "x":310, "y":151, "set":0},
+        {"w": 21, "h": 34, "x":284, "y":185, "set":0},
+        {"w": 16, "h": 33, "x":305, "y":185, "set":0},
+        {"w": 51, "h": 34, "x":57, "y":83, "set":0},
+        {"w": 51, "h": 34, "x":99, "y":0, "set":0},
+        {"w": 51, "h": 34, "x":99, "y":34, "set":0},
+        {"w": 51, "h": 34, "x":150, "y":0, "set":0},
+        {"w": 51, "h": 34, "x":150, "y":34, "set":0},
+        {"w": 51, "h": 34, "x":108, "y":68, "set":0},
+        {"w": 51, "h": 34, "x":201, "y":0, "set":0},
+        {"w": 51, "h": 34, "x":159, "y":68, "set":0},
+        {"w": 51, "h": 34, "x":201, "y":34, "set":0},
+        {"w": 16, "h": 33, "x":347, "y":145, "set":0},
+        {"w": 12, "h": 33, "x":395, "y":182, "set":0},
+        {"w": 12, "h": 33, "x":407, "y":182, "set":0},
+        {"w": 12, "h": 33, "x":419, "y":182, "set":0},
+        {"w": 16, "h": 33, "x":321, "y":185, "set":0},
+        {"w": 16, "h": 33, "x":383, "y":113, "set":0},
+        {"w": 16, "h": 33, "x":399, "y":113, "set":0},
+        {"w": 16, "h": 33, "x":363, "y":147, "set":0},
+        {"w": 16, "h": 33, "x":337, "y":181, "set":0},
+        {"w": 14, "h": 36, "x":353, "y":180, "set":0},
+        {"w": 14, "h": 36, "x":395, "y":146, "set":0},
+        {"w": 14, "h": 36, "x":367, "y":180, "set":0},
+        {"w": 14, "h": 36, "x":409, "y":146, "set":0},
+        {"w": 14, "h": 36, "x":381, "y":180, "set":0},
+        {"w": 16, "h": 36, "x":367, "y":111, "set":0},
+        {"w": 16, "h": 36, "x":331, "y":145, "set":0},
+        {"w": 16, "h": 36, "x":409, "y":71, "set":0},
+        {"w": 24, "h": 40, "x":377, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":377, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":276, "y":111, "set":0},
+        {"w": 25, "h": 37, "x":352, "y":37, "set":0},
+        {"w": 25, "h": 37, "x":239, "y":148, "set":0},
+        {"w": 25, "h": 37, "x":326, "y":74, "set":0},
+        {"w": 25, "h": 37, "x":402, "y":0, "set":0},
+        {"w": 25, "h": 37, "x":264, "y":148, "set":0},
+        {"w": 41, "h": 74, "x":0, "y":119, "set":0},
+        {"w": 41, "h": 74, "x":41, "y":119, "set":0},
+        {"w": 41, "h": 74, "x":82, "y":123, "set":0},
+        {"w": 41, "h": 74, "x":123, "y":123, "set":0},
+        {"w": 24, "h": 40, "x":239, "y":185, "set":0},
+        {"w": 41, "h": 74, "x":210, "y":68, "set":0},
+        {"w": 23, "h": 35, "x":23, "y":193, "set":0},
+        {"w": 23, "h": 35, "x":46, "y":193, "set":0},
+        {"w": 57, "h": 18, "x":0, "y":83, "set":0},
+        {"w": 56, "h": 18, "x":0, "y":101, "set":0},
+        {"w": 48, "h": 21, "x":108, "y":102, "set":0}
+    ],
+    
+    "dialogs": [
+        {
+            "scriptName": "dMood",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "I feel that your stance on politics is closed minded.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "You are clearly a man of keen mind when it come to politics.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "You have some interesting political views, but I am uncertain I agree with all of them.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "I commend your astute religious views.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Your religious beliefs seem well formed, even if I disagree with them.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I have never met someone so ignorant about religion before.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Your taste in entertainment is terrible.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Our preferred forms of entertainment are quite different, but I do find yours interesting.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I applaud your fine choices in entertainment, sir!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "CHECKER",
+                    "show": false,
+                    "say": false
+                }
+            ]
+        },
+        {
+            "scriptName": "dSign",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "Did you see the man who took the monument?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Did you see where this man went when he left?",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Is there anything else you remember that could help me?",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Let's talk about you...",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Goodbye.",
+                    "show": true,
+                    "say": true
+                }
+            ]
+        },
+        {
+            "scriptName": "dPhone",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "Press the first button",
+                    "show": true,
+                    "say": false
+                },
+                {
+                    "text": "Press the second button",
+                    "show": true,
+                    "say": false
+                },
+                {
+                    "text": "Press the third button",
+                    "show": true,
+                    "say": false
+                },
+                {
+                    "text": "Press the fourth button",
+                    "show": true,
+                    "say": false
+                },
+                {
+                    "text": "Leave",
+                    "show": true,
+                    "say": false
+                },
+                {
+                    "text": "ender",
+                    "show": false,
+                    "say": false
+                }
+            ]
+        },
+        {
+            "scriptName": "dSoda",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "Err... Friday flavoured soda?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "I'm looking for a specific man. Do you remember serving anyone in a top hat?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Why can't you make the phone call?",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Hold that thought, I'll be back in a minute.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "ender",
+                    "show": false,
+                    "say": false
+                }
+            ]
+        },
+        {
+            "scriptName": "dPicnic",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "What's this you're saying about finding balance?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Do you remember seeing a man in a top hat?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Look, I really need to speak to this Elder Steve.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Excuse me for a minute, will you?",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "ender",
+                    "show": false,
+                    "say": false
+                }
+            ]
+        },
+        {
+            "scriptName": "dTrash",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "That's an... interesting hairstyle you have there.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "Your beard is larger than most men's beards.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "I really like your outfit.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "This tip is a really nice place to hang out.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Did you actually choose to live here?",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Big place you've got here...",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Lots of variety in the food you've got around here.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You eat the scraps? Couldn't you just buy some food or something?",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "The scraps lying around here look really tasty!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "This place is really exciting! I can see why you hang out here!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "There's plenty of things to look at here.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I guess you could find some cool stuff amongst the junk...",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I'll be back in a bit.",
+                    "show": true,
+                    "say": true
+                }
+            ]
+        },
+        {
+            "scriptName": "dBattle",
+            "showTextParser": false,
+            "options": [
+                null,
+                {
+                    "text": "You act like you're so tough, but I'm calling out yo' bluff.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "You really ain't so mean, in that stupid big machine.",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "You're a poser and a fake, despite every claim you make!",
+                    "show": true,
+                    "say": true
+                },
+                {
+                    "text": "I'm seeing through your mask, see you're not up to the task.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "All pretenders are the same, hear me bring this whole new game!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Even in your stupid hat, you ain't gangsta, you ain't phat.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You act like you're so tough, but I'm calling out yo' bluff!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You really ain't so mean, in that stupid big machine.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You're a poser and a fake, in spite of every claim you make.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I'm seeing through your mask, see you're not up to the task.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "All pretenders are the same, hear me bring this whole new game.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Even in your stupid hat, you ain't gangsta, you ain't phat!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You act like you're so tough, but I'm calling out yo' bluff.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You really ain't so mean, in that stupid big machine!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "You're a poser and a fake, in spite of every claim you make.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "I'm seeing through your mask, see you're not up to the task!",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "All pretenders are the same, hear me bring this whole new game.",
+                    "show": false,
+                    "say": true
+                },
+                {
+                    "text": "Even in your stupid hat, you ain't gangsta, you ain't phat.",
+                    "show": false,
+                    "say": true
+                }
+            ]
+        }
+    ],
+    
+    "fonts": [
+        null,
+        null,
+        null,
+        {
+            "ascent": 6,
+            "descent": 2,
+            "lineHeight": 10,
+            "imageWidth": 87,
+            "charGap": 1,
+            "imageHeight": 52,
+            "chars": [
+                32, {"x":0, "y":0, "w":0, "h":0, "a":4},
+                    {"x":76, "y":43, "w":2, "h":5},
+                34, {"x":60, "y":28, "w":5, "h":2, "up":3},
+                    {"x":38, "y":36, "w":5, "h":5},
+                    {"x":19, "y":7, "w":6, "h":7},
+                    {"x":0, "y":21, "w":6, "h":5},
+                    {"x":10, "y":6, "w":7, "h":5},
+                39, {"x":53, "y":49, "w":2, "h":2, "up":3},
+                    {"x":66, "y":35, "w":3, "h":7, "up":-1},
+                    {"x":78, "y":26, "w":3, "h":7, "up":-1},
+                    {"x":8, "y":13, "w":6, "h":5},
+                    {"x":8, "y":20, "w":6, "h":5},
+                44, {"x":82, "y":0, "w":3, "h":3, "up":-2},
+                    {"x":38, "y":50, "w":4, "h":1, "up":1},
+                    {"x":76, "y":50, "w":2, "h":1},
+                    {"x":16, "y":16, "w":6, "h":5},
+                    {"x":16, "y":23, "w":6, "h":5},
+                    {"x":71, "y":45, "w":3, "h":5},
+                    {"x":24, "y":16, "w":6, "h":5},
+                    {"x":24, "y":23, "w":6, "h":5},
+                    {"x":29, "y":0, "w":6, "h":5},
+                    {"x":27, "y":7, "w":6, "h":5},
+                    {"x":37, "y":0, "w":6, "h":5},
+                    {"x":31, "y":44, "w":5, "h":5},
+                    {"x":35, "y":7, "w":6, "h":5},
+                    {"x":45, "y":0, "w":6, "h":5},
+                58, {"x":49, "y":49, "w":2, "h":3, "up":1},
+                    {"x":59, "y":46, "w":3, "h":6},
+                    {"x":67, "y":28, "w":4, "h":5},
+                    {"x":80, "y":6, "w":5, "h":3},
+                    {"x":60, "y":39, "w":4, "h":5},
+                    {"x":46, "y":35, "w":5, "h":5},
+                    {"x":32, "y":14, "w":6, "h":5},
+                    {"x":43, "y":7, "w":6, "h":5},
+                    {"x":32, "y":21, "w":6, "h":5},
+                    {"x":53, "y":0, "w":6, "h":5},
+                    {"x":40, "y":14, "w":6, "h":5},
+                    {"x":38, "y":43, "w":5, "h":5},
+                70, {"x":53, "y":28, "w":5, "h":5},
+                    {"x":51, "y":7, "w":6, "h":5},
+                    {"x":40, "y":21, "w":6, "h":5},
+                    {"x":80, "y":43, "w":2, "h":5},
+                    {"x":53, "y":35, "w":5, "h":5},
+                    {"x":48, "y":14, "w":6, "h":5},
+                    {"x":45, "y":42, "w":5, "h":5},
+                    {"x":20, "y":0, "w":7, "h":5},
+                    {"x":48, "y":21, "w":6, "h":5},
+                    {"x":56, "y":14, "w":6, "h":5},
+                80, {"x":56, "y":21, "w":6, "h":5},
+                    {"x":0, "y":13, "w":6, "h":6},
+                    {"x":0, "y":28, "w":6, "h":5},
+                    {"x":0, "y":35, "w":6, "h":5},
+                    {"x":8, "y":27, "w":6, "h":5},
+                    {"x":8, "y":34, "w":6, "h":5},
+                    {"x":0, "y":42, "w":6, "h":5},
+                    {"x":0, "y":0, "w":8, "h":5},
+                    {"x":16, "y":30, "w":6, "h":5},
+                    {"x":8, "y":41, "w":6, "h":5},
+                90, {"x":16, "y":37, "w":6, "h":5},
+                    {"x":71, "y":36, "w":3, "h":7},
+                    {"x":24, "y":30, "w":6, "h":5},
+                    {"x":66, "y":44, "w":3, "h":7},
+                    {"x":64, "y":24, "w":5, "h":2},
+                95, {"x":30, "y":51, "w":5, "h":1, "up":-1},
+                    {"x":44, "y":50, "w":3, "h":2},
+                    {"x":64, "y":18, "w":5, "h":4},
+                    {"x":52, "y":42, "w":5, "h":5},
+                    {"x":73, "y":12, "w":5, "h":4},
+                    {"x":31, "y":37, "w":5, "h":5},
+                    {"x":8, "y":48, "w":5, "h":4},
+                    {"x":76, "y":36, "w":3, "h":5},
+                103,{"x":16, "y":44, "w":5, "h":6, "up":-2},
+                    {"x":23, "y":45, "w":5, "h":5},
+                    {"x":83, "y":29, "w":2, "h":5},
+                106,{"x":73, "y":27, "w":3, "h":7, "up":-2},
+                    {"x":46, "y":28, "w":5, "h":5},
+                    {"x":81, "y":36, "w":2, "h":5},
+                    {"x":0, "y":7, "w":8, "h":4},
+                    {"x":61, "y":0, "w":5, "h":4},
+                    {"x":59, "y":7, "w":5, "h":4},
+                112,{"x":32, "y":28, "w":5, "h":6, "up":-2},
+                    {"x":24, "y":37, "w":5, "h":6, "up":-2},
+                    {"x":77, "y":20, "w":4, "h":4},
+                    {"x":68, "y":0, "w":5, "h":4},
+                    {"x":60, "y":32, "w":4, "h":5},
+                    {"x":66, "y":6, "w":5, "h":4},
+                    {"x":75, "y":0, "w":5, "h":4},
+                    {"x":10, "y":0, "w":8, "h":4},
+                    {"x":66, "y":12, "w":5, "h":4},
+                121,{"x":39, "y":28, "w":5, "h":6, "up":-2},
+                    {"x":73, "y":6, "w":5, "h":4},
+                    {"x":71, "y":18, "w":4, "h":7},
+                    {"x":83, "y":20, "w":2, "h":7},
+                    {"x":80, "y":11, "w":4, "h":7},
+                    {"x":0, "y":49, "w":6, "h":2}
+            ]
+        },
+        {
+            "ascent": 23,
+            "descent": 7,
+            "imageWidth": 148,
+            "imageHeight": 121,
+            "charGap": 2,
+            "chars": [
+                32, {"x":0, "y":0, "w":0, "h":0,      "a":10},
+                33, {"x":138, "y":82, "w":3, "h":16},
+                    {"x":24, "y":113, "w":8, "h":6},
+                    {"x":47, "y":18, "w":13, "h":16},
+                    {"x":128, "y":36, "w":9, "h":23, "up":-7},
+                39, {"x":41, "y":108, "w":3, "h":6},
+                43, {"x":0, "y":108, "w":10, "h":10},
+                    {"x":46, "y":108, "w":3, "h":6, "up":-3},
+                    {"x":24, "y":108, "w":10, "h":3},
+                    {"x":41, "y":116, "w":3, "h":3},
+                48, {"x":87, "y":54, "w":10, "h":16},
+                    {"x":139, "y":36, "w":7, "h":16},
+                    {"x":74, "y":72, "w":10, "h":16},
+                    {"x":60, "y":90, "w":10, "h":16},
+                    {"x":99, "y":54, "w":10, "h":16},
+                    {"x":86, "y":72, "w":10, "h":16},
+                    {"x":72, "y":90, "w":10, "h":16},
+                    {"x":111, "y":54, "w":10, "h":16},
+                    {"x":98, "y":72, "w":10, "h":16},
+                    {"x":84, "y":90, "w":10, "h":16},
+                    {"x":36, "y":108, "w":3, "h":13},
+                    {"x":120, "y":100, "w":3, "h":16},
+                61, {"x":12, "y":108, "w":10, "h":10},
+                63, {"x":122, "y":82, "w":9, "h":16},
+                65, {"x":30, "y":36, "w":13, "h":16},
+                    {"x":102, "y":36, "w":11, "h":16},
+                    {"x":110, "y":72, "w":10, "h":16},
+                    {"x":115, "y":36, "w":11, "h":16},
+                    {"x":0, "y":54, "w":11, "h":16},
+                    {"x":13, "y":54, "w":11, "h":16},
+                    {"x":96, "y":90, "w":10, "h":16},
+                    {"x":45, "y":36, "w":13, "h":16},
+                    {"x":140, "y":0, "w":6, "h":16},
+                    {"x":75, "y":36, "w":12, "h":16},
+                    {"x":55, "y":0, "w":13, "h":16},
+                    {"x":0, "y":72, "w":11, "h":16},
+                    {"x":37, "y":0, "w":16, "h":16},
+                    {"x":0, "y":18, "w":15, "h":16},
+                    {"x":108, "y":90, "w":10, "h":16},
+                    {"x":26, "y":54, "w":11, "h":16},
+                81, {"x":134, "y":61, "w":9, "h":19, "up":-3},
+                    {"x":70, "y":0, "w":13, "h":16},
+                    {"x":128, "y":0, "w":10, "h":16},
+                    {"x":62, "y":18, "w":13, "h":16},
+                    {"x":85, "y":0, "w":13, "h":16},
+                    {"x":77, "y":18, "w":13, "h":16},
+                    {"x":0, "y":0, "w":17, "h":16},
+                    {"x":60, "y":36, "w":13, "h":16},
+                    {"x":100, "y":0, "w":13, "h":16},
+                    {"x":13, "y":72, "w":11, "h":16},
+                97, {"x":106, "y":18, "w":12, "h":16},
+                    {"x":120, "y":18, "w":10, "h":16},
+                    {"x":132, "y":18, "w":10, "h":16},
+                    {"x":0, "y":90, "w":10, "h":16},
+                    {"x":39, "y":54, "w":10, "h":16},
+                    {"x":26, "y":72, "w":10, "h":16},
+                    {"x":12, "y":90, "w":10, "h":16},
+                    {"x":51, "y":54, "w":10, "h":16},
+                    {"x":133, "y":82, "w":3, "h":16},
+                    {"x":38, "y":72, "w":10, "h":16},
+                    {"x":115, "y":0, "w":11, "h":16},
+                    {"x":24, "y":90, "w":10, "h":16},
+                    {"x":17, "y":18, "w":13, "h":16},
+                    {"x":89, "y":36, "w":11, "h":16},
+                    {"x":63, "y":54, "w":10, "h":16},
+                    {"x":50, "y":72, "w":10, "h":16},
+                    {"x":123, "y":61, "w":9, "h":19},
+                    {"x":36, "y":90, "w":10, "h":16},
+                    {"x":75, "y":54, "w":10, "h":16},
+                    {"x":0, "y":36, "w":13, "h":16},
+                    {"x":62, "y":72, "w":10, "h":16},
+                    {"x":92, "y":18, "w":12, "h":16},
+                    {"x":19, "y":0, "w":16, "h":16},
+                    {"x":32, "y":18, "w":13, "h":16},
+                    {"x":15, "y":36, "w":13, "h":16},
+                    {"x":48, "y":90, "w":10, "h":16}
+            ]
+        }
+    ]
+    
+}

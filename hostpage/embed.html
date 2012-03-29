@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>AGS Web Runtime Proof-of-Concept Demo</title>
+				<script type="text/javascript" src="jslibs/jquery-1.4.4.min.js"></script>				
+        <script type='text/javascript' src='jslibs/json2.js'></script>
+        <script type='text/javascript' src='jslibs/swfobject/swfobject.js'></script>
+        <script type='text/javascript' src='../js/ags.js'></script>
+        <script type='text/javascript' src='../js/ags.Engine.compat_audio.js'></script>
+        <script type='text/javascript' src='../js/ags.FlashRenderer.js'></script>
+        <script type='text/javascript' src='../js/ags.CanvasRenderer.js'></script>
+        <script type='text/javascript' src='../js/ags.HTML5AudioPlayer.js'></script>
+        <script type='text/javascript' src='../js/ags.FlashOggVorbisPlayer.js'></script>
+        <script type='text/javascript' src='../js/ags.LocalStorageFileSystem.js'></script>
+        <script type='text/javascript' src='game/globalScripts.js'></script>
+        <script type='text/javascript'>
+        
+            jQuery(function($){
+            
+                window.focus();
+            
+                var engine, game;
+                
+                engine = new ags.Engine();
+                
+                var setParams = function(params) {
+                    //alert($.param(params));
+                    window.focus();
+                };
+                
+                var decodeParams = function(str) {
+                    var obj = {};
+                    var vs = str.split('\x26');
+                    for (var i = 0; i < vs.length; i++) {
+                        var split = vs[i].split('=', 2);
+                        switch(split.length) {
+                            case 1:
+                                obj[decodeURIComponent(split[0]).replace('+',' ')] = true;
+                                break;
+                            case 2:
+                                obj[decodeURIComponent(split[0]).replace('+',' ')] = decodeURIComponent(split[1]).replace('+',' ');
+                                break;
+                        }
+                    }
+                    return obj;
+                };
+                
+                var lastHash = (window.document.location.hash || "#");
+                if (lastHash && lastHash.length > 1) {
+                    setParams(decodeParams(lastHash.replace(/^#/g,'')));
+                }
+                
+                if (typeof window.postMessage === 'undefined') {
+                    
+                    window.setInterval(function() {
+                        var newHash = window.location.hash || "#";
+                        if (newHash !== lastHash) {
+                            setParams(decodeParams(newHash.replace(/^#/g, '')));
+                            lastHash = newHash;
+                        }
+                    }, 250);
+                    
+                }
+                else {
+                
+                    $(window).bind('message', function(evt) {
+                        setParams(decodeParams(evt.originalEvent.data));
+                    });
+                
+                }
+                
+                $.ajax({
+                    dataType: "json",
+                    type: "GET",
+                    cache: false,
+                    url: "game/game.json",
+                    success: function(gameDef) {
+                    
+                        game = engine.load(gameDef, "game/");
+                        
+                        var canvas = document.createElement('CANVAS');
+                        var forceFlash = window.location.search.indexOf("flash") !== -1;
+                        
+                        if (!forceFlash && canvas && canvas.getContext) {
+                            
+                            $(canvas).attr('id', 'gameScreen');
+                            canvas.width = gameDef.settings.width;
+                            canvas.height = gameDef.settings.height;
+                            var ctx = canvas.getContext('2d');
+                            ctx.fillStyle = '#000000';
+                            ctx.fillRect(0, 0, gameDef.settings.width, gameDef.settings.height);
+                            $("body").append(canvas);
+                            
+                            engine.renderer = new ags.CanvasRenderer(engine, canvas);
+                            
+                        }
+                        else {
+                            
+                            // Try to snatch back focus to the main page whenever Flash gets it.
+                            // I know browser sniffing is bad, but IE8 chokes horribly on this and doesn't
+                            // seem to need it anyway. Safari also doesn't seem to need it.
+                            // No effect on Opera. But does seem to help Firefox and Chrome.
+                            if (!$.browser.msie) {
+                            
+                                $('body').attr('tabIndex', '0');
+                            
+                                $('body').focusin(function(e) {
+                                    if (e.target.id === 'gameScreen') {
+                                        document.body.focus();
+                                    }
+                                });
+                            }
+                        
+                            $("<div>").attr('id','gameScreen').prependTo('body');
+                            engine.renderer = new ags.FlashRenderer(engine, "FlashRenderer.swf", "gameScreen");
+                            
+                        }
+                        
+                        var testAudio = document.createElement("AUDIO");
+                        /*
+                        if (!forceFlash && testAudio && testAudio.canPlayType && testAudio.canPlayType("audio/ogg")) {
+                            engine.addAudioPlayer(new ags.HTML5AudioPlayer(engine));
+                        }
+                        else {
+                            engine.addAudioPlayer(new ags.FlashOggVorbisPlayer(engine, "AnOgg.swf"));
+                        }
+                        */
+                        
+                        if (ags.LocalStorageFileSystem.detectCompatibility()) {
+                            engine.fileSystem = new ags.LocalStorageFileSystem("ags:" + gameDef.guid + "/");
+                        }
+                        
+                        $(engine).bind('begin', function() {
+                            $(window).resize();
+                        });
+                        
+                        $(engine).bind('mouseUp', function() {
+                            document.body.focus();
+                            window.focus();
+                        });
+                        
+                        $(engine).bind('mouseDown', function() {
+                            document.body.focus();
+                            window.focus();
+                        });
+                        
+                        $(engine).bind('quit', function() {
+                            $("canvas, audio, object, embed").remove();
+                        });
+                        
+                        engine.play();
+                        
+                        // Keypresses on the page itself should be captured by the game
+                        $(document).keydown(engine.keyDownHandler);
+                        $(document).keyup(engine.keyUpHandler);
+                    }
+                });
+                
+            });
+            
+        </script>
+        <style type='text/css'>
+            body {
+                padding: 0;
+                margin: 0;
+                background: black;
+                overflow: hidden;
+                color: white;
+                font-family: sans-serif;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            canvas {
+                image-rendering: -moz-crisp-edges;
+            }
+            #gameScreen {
+                position: absolute;
+                cursor: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP%2F%2F%2FyH5BAEAAAAALAAAAAABAAEAAAIBRAA7"), crosshair;
+                width: 100%;
+                height: 100%;
+            }
+            .offscreen {
+                position: absolute;
+                left: -200px;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+</html>

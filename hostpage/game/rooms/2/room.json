@@ -1,0 +1,20 @@
+{
+    "description": "Titles",
+    "number": 2,
+    "stateSaving": true,
+    "bottomEdgeY": 198,
+    "leftEdgeX": 0,
+    "rightEdgeX": 317,
+    "topEdgeY": 40,
+    "backgroundAnimationDelay": 5,
+    "legacyMusicVolumeAdjustment": "normal",
+    "playerCharacterView": 0,
+    "showPlayerCharacter": true,
+    "colorDepth": 32,
+    "height": 240,
+    "width": 320,
+    "numBackgrounds": 2,
+    "objects": [],
+    "hotspots": [],
+    "walkbehinds": []
+}
